@@ -10,8 +10,16 @@ import SwiftUI
 @main
 struct SwiftUIWithMVVMHomeAssistantExmpleApp: App {
     var body: some Scene {
+        
         WindowGroup {
-            ContentView()
+            
+            TabView {
+                UsersListView()
+                    .tabItem {
+                        Symboles.person
+                        Text("Home")
+                    }
+            }
         }
     }
 }
