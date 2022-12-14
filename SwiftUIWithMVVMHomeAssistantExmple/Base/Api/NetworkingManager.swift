@@ -90,12 +90,32 @@ final class NetworkigManager {
 
 extension NetworkigManager {
     
-    enum NetworkingError: Error {
+    enum NetworkingError: LocalizedError {
         case invalidUrl
         case custom(error: Error)
         case invalidStatusCode(statusCode: Int)
         case invalidData
         case failedToDecode(error: Error)
+    }
+}
+
+extension NetworkigManager.NetworkingError {
+    
+    var errorDescription: String? {
+        
+        switch self {
+            
+        case .invalidUrl:
+            return "URL isn't valid"
+        case .custom(error: let error):
+            return "Something went wrong \(error.localizedDescription)"
+        case .invalidStatusCode(statusCode: let statusCode):
+            return "Status code faliled to wrong range"
+        case .invalidData:
+            return "Rsponse data is invalid"
+        case .failedToDecode(error: let error):
+            return "Failed to decode"
+        }
     }
 }
 
