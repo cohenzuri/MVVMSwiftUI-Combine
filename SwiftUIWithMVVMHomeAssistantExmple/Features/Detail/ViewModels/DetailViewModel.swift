@@ -10,6 +10,8 @@ import Foundation
 final class DetailViewModel: ObservableObject {
     
     @Published private(set) var userInfo: UserResponse?
+    @Published private(set) var error: NetworkigManager.NetworkingError?
+    @Published var hasError = false
     
     func fetchDetails(for userId: Int) {
         
@@ -21,7 +23,8 @@ final class DetailViewModel: ObservableObject {
                 case .success(let response):
                     self?.userInfo = response
                 case .failure(let error):
-                    print(error)
+                    self?.hasError = true
+                    self?.error = error as? NetworkigManager.NetworkingError
                 }
             }
         }

@@ -21,7 +21,7 @@ final class NetworkigManager {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
-            
+        
         let request = buildRequest(from: url, methodType: methodType)
         
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -63,7 +63,7 @@ final class NetworkigManager {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
-            
+        
         let request = buildRequest(from: url, methodType: methodType)
         
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
@@ -81,7 +81,7 @@ final class NetworkigManager {
                 completion(.failure(NetworkingError.invalidStatusCode(statusCode: statusCode)))
                 return
             }
-           
+            
             completion(.success(()))
         }
         dataTask.resume()
@@ -134,7 +134,7 @@ private extension NetworkigManager {
         var request = URLRequest(url: url)
         
         switch methodType {
-         
+            
         case .GET:
             request.httpMethod = "GET"
         case .POST:

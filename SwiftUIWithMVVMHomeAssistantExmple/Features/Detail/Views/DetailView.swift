@@ -70,6 +70,8 @@ private extension DetailView {
                 emailView
             }
             .foregroundColor(Theme.text)
+            
+            .alert(isPresented: $vm.hasError, error: vm.error) {}
         }
     }
 }
