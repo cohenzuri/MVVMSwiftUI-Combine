@@ -22,21 +22,25 @@ struct UsersListView: View {
                 
                 background
                 
-                ScrollView {
-                    
-                    LazyVGrid(columns: columns,
-                              spacing: 16) {
+                if vm.isLoading {
+                    ProgressView()
+                } else {
+                    ScrollView {
                         
-                        ForEach(vm.users, id: \.id) { user in
+                        LazyVGrid(columns: columns,
+                                  spacing: 16) {
                             
-                            NavigationLink {
-                                DetailView(userID: user.id)
-                            } label: {
-                                UserCellView(userData: user)
+                            ForEach(vm.users, id: \.id) { user in
+                                
+                                NavigationLink {
+                                    DetailView(userID: user.id)
+                                } label: {
+                                    UserCellView(userData: user)
+                                }
+                                
                             }
-                            
-                        }
-                    }.padding()
+                        }.padding()
+                    }
                 }
             }
             
