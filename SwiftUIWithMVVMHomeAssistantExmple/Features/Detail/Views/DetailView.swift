@@ -14,20 +14,28 @@ struct DetailView: View {
     
     var body: some View {
         
-        ScrollView {
-            
-            VStack(alignment: .leading, spacing: 18) {
+        ZStack {
+            if vm.isLoading {
+                ProgressView()
+            } else {
                 
-                Group {
-                    generalView
-                    linkView
+                
+                ScrollView {
+                    
+                    VStack(alignment: .leading, spacing: 18) {
+                        
+                        Group {
+                            generalView
+                            linkView
+                        }
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 18)
+                        .background(Theme.background, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        
+                    }
+                    .padding()
                 }
-                .padding(.horizontal, 8)
-                .padding(.vertical, 18)
-                .background(Theme.background, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-                
             }
-            .padding()
         }
         
         .navigationTitle("Details")
@@ -35,7 +43,6 @@ struct DetailView: View {
             vm.fetchDetails(for: userID)
         }
     }
-    
 }
 
 struct DetailView_Previews: PreviewProvider {
@@ -106,7 +113,7 @@ private extension DetailView {
                         Text(supportString)
                     }
                     Spacer()
-                    Symboles.link
+                    Symbols.link
                 }
             }
         }

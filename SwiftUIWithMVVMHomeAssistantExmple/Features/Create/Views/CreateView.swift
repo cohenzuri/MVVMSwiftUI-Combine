@@ -11,7 +11,7 @@ struct CreateView: View {
     
     @Environment(\.dismiss) private var dismiss
     @StateObject private var vm = CreateViewModel()
-    
+    let successfulAction: () -> Void
     
     var body: some View {
         
@@ -26,6 +26,7 @@ struct CreateView: View {
                     submit
                 }
             }
+            .disabled(vm.state == .submitting)
             .navigationTitle("Create")
             
             .toolbar {
@@ -37,16 +38,23 @@ struct CreateView: View {
             .onChange(of: vm.state) { formState in
                 if formState == .successful {
                     dismiss()
+                    successfulAction()
                 }
             }
-            .alert(isPresented: $vm.hasError, error: vm.error) {}
+            .alert(isPresented: $vm.hasError, error: vm.error) { }
+            
+            .overlay {
+                if vm.state == .submitting {
+
+                }
+            }
         }
     }
 }
 
 struct CreateView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateView()
+        CreateView(successfulAction: {} )
     }
 }
 

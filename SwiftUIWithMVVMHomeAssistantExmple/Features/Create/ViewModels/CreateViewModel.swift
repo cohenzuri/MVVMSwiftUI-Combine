@@ -14,13 +14,17 @@ final class CreateViewModel: ObservableObject {
     @Published private(set) var error: NetworkigManager.NetworkingError?
     @Published var hasError = false
     
+    
     func create() {
+        
+        self.state = .submitting
+        
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
         let data = try? encoder.encode(user)
         
-        NetworkigManager.shared.request(methodType: .POST(data: data), "https://reqres.in/api/users") { [weak self] res in
-            
+        NetworkigManager.shared.request(methodType: .POST(data: data), "https://reqres.in/api/users?delay=3") { [weak self] res in
+           
             DispatchQueue.main.async {
                 
                 switch res {
@@ -41,5 +45,6 @@ extension CreateViewModel {
     enum SubmissionState {
         case unsuccessful
         case successful
+        case submitting
     }
 }

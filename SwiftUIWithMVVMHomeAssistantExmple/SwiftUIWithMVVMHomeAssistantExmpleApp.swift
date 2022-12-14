@@ -16,7 +16,7 @@ struct SwiftUIWithMVVMHomeAssistantExmpleApp: App {
             TabView {
                 UsersListView()
                     .tabItem {
-                        Symboles.person
+                        Symbols.person
                         Text("Home")
                     }
             }
