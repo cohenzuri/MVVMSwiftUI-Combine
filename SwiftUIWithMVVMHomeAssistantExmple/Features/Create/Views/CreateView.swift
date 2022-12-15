@@ -45,7 +45,7 @@ struct CreateView: View {
             
             .overlay {
                 if vm.state == .submitting {
-
+                    ProgressView()
                 }
             }
         }
@@ -80,7 +80,7 @@ private extension CreateView {
     
     var submit: some View {
         Button("Submit") {
-            
+            vm.create()
         }
     }
     

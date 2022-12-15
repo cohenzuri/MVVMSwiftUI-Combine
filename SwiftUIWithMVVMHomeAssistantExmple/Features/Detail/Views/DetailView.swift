@@ -19,7 +19,6 @@ struct DetailView: View {
                 ProgressView()
             } else {
                 
-                
                 ScrollView {
                     
                     VStack(alignment: .leading, spacing: 18) {

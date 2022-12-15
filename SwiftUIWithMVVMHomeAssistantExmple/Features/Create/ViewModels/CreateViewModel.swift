@@ -14,7 +14,6 @@ final class CreateViewModel: ObservableObject {
     @Published private(set) var error: NetworkigManager.NetworkingError?
     @Published var hasError = false
     
-    
     func create() {
         
         self.state = .submitting
@@ -24,7 +23,7 @@ final class CreateViewModel: ObservableObject {
         let data = try? encoder.encode(user)
         
         NetworkigManager.shared.request(methodType: .POST(data: data), "https://reqres.in/api/users?delay=3") { [weak self] res in
-           
+            
             DispatchQueue.main.async {
                 
                 switch res {
@@ -33,7 +32,6 @@ final class CreateViewModel: ObservableObject {
                     self?.state = .successful
                 case .failure(let err):
                     self?.state = .unsuccessful
-                    break
                 }
             }
         }
