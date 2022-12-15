@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5E31ED294B2D6D009B77F1 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */; };
 		0B8B6E1529434804003B4F96 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1429434804003B4F96 /* CreateView.swift */; };
 		0B8B6E1829434D74003B4F96 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */; };
 		0B9B1A50294149DE0094F412 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B1A4F294149DE0094F412 /* DetailView.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 		0B8B6E1429434804003B4F96 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		0B9B1A4F294149DE0094F412 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -63,9 +65,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B5E31EB294B2D3A009B77F1 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */,
+			);
+			path = Validator;
+			sourceTree = "<group>";
+		};
 		0B8B6E10294347C1003B4F96 /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				0B5E31EB294B2D3A009B77F1 /* Validator */,
 				0B8B6E13294347F0003B4F96 /* Models */,
 				0B8B6E12294347DE003B4F96 /* ViewModels */,
 				0B8B6E11294347D3003B4F96 /* Views */,
@@ -344,6 +355,7 @@
 				0BC8AF67293D1AC400D24A67 /* PillView.swift in Sources */,
 				0BC04576293B406F008D32F6 /* ContentView.swift in Sources */,
 				0B8B6E1529434804003B4F96 /* CreateView.swift in Sources */,
+				0B5E31ED294B2D6D009B77F1 /* CreateValidator.swift in Sources */,
 				0BC04574293B406F008D32F6 /* SwiftUIWithMVVMHomeAssistantExmpleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

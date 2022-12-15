@@ -83,5 +83,4 @@ private extension CreateView {
             vm.create()
         }
     }
-    
 }
