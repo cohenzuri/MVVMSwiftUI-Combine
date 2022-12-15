@@ -20,7 +20,7 @@ final class PeopleViewModel: ObservableObject {
             
             self.isLoading = true
             
-            NetworkigManager.shared.request("https://reqres.in/api/users?delay=4", type: UsersResponse.self) { [weak self] res in
+            NetworkigManager.shared.request("https://reqres.in/api/users?delay=0", type: UsersResponse.self) { [weak self] res in
                 defer { self?.isLoading = false }
                 switch res {
                 case .success(let response):
