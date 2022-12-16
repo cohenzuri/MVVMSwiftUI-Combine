@@ -14,6 +14,7 @@ struct UsersListView: View {
     @StateObject private var vm = PeopleViewModel()
     @State private var shouldShowCreate = false
     @State private var shouldShowSuccess = false
+    @State private var hasAppeared = false
     
     var body: some View {
         
@@ -45,16 +46,25 @@ struct UsersListView: View {
             }
             
             .navigationTitle("People")
+            
             .toolbar {
+                
                 ToolbarItem(placement: .primaryAction) {
-                    
                     create
-                    
                 }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    refresh
+                }
+                
             }
         }
+        
         .task {
-            await vm.fetchUsers()
+            if !hasAppeared {
+                await vm.fetchUsers()
+                hasAppeared = true
+            }
         }
         .sheet(isPresented: $shouldShowCreate) {
             
@@ -69,7 +79,7 @@ struct UsersListView: View {
         .alert(isPresented: $vm.hasError, error: vm.error) {
             Button("Retry") {
                 Task {
-                   await vm.fetchUsers()
+                    await vm.fetchUsers()
                 }
             }
         }
@@ -98,6 +108,19 @@ struct UsersListView: View {
 
 
 private extension UsersListView {
+    
+    var refresh: some View {
+        
+        Button{
+            Task {
+                await vm.fetchUsers()
+            }
+            
+        } label: {
+            Symbols.refresh
+        }
+        .disabled(vm.isLoading)
+    }
     
     var create: some View {
         
