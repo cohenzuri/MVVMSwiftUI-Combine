@@ -38,8 +38,8 @@ struct DetailView: View {
         }
         
         .navigationTitle("Details")
-        .onAppear{
-            vm.fetchDetails(for: userID)
+        .task {
+            await vm.fetchDetails(for: userID)
         }
     }
 }
@@ -139,7 +139,6 @@ private extension DetailView {
         Divider()
     }
 }
-
 
 private extension DetailView {
     
