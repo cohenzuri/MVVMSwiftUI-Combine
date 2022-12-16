@@ -119,14 +119,6 @@ extension NetworkigManager.NetworkingError {
     }
 }
 
-extension NetworkigManager {
-    
-    enum MethodType {
-        case GET
-        case POST(data: Data?)
-    }
-}
-
 private extension NetworkigManager {
     
     func buildRequest(from url: URL, methodType: MethodType) -> URLRequest {

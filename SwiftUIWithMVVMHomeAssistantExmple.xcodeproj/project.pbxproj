@@ -14,6 +14,7 @@
 		0B8B6E1829434D74003B4F96 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */; };
 		0B9B1A50294149DE0094F412 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B1A4F294149DE0094F412 /* DetailView.swift */; };
 		0BA9A508294BC24E00FBB315 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */; };
+		0BA9A50B294BC53500FBB315 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A50A294BC53500FBB315 /* Endpoint.swift */; };
 		0BB2FD4D2945D2C80092BBCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2FD4C2945D2C80092BBCF /* User.swift */; };
 		0BB2FD4F294648A10092BBCF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2FD4E294648A10092BBCF /* DetailViewModel.swift */; };
 		0BBFEFFE294A702400B72FBF /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFEFFD294A702400B72FBF /* CheckmarkPopoverView.swift */; };
@@ -40,6 +41,7 @@
 		0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		0B9B1A4F294149DE0094F412 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		0BA9A50A294BC53500FBB315 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0BB2FD4C2945D2C80092BBCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0BB2FD4E294648A10092BBCF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		0BBFEFFD294A702400B72FBF /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */,
+				0BA9A50A294BC53500FBB315 /* Endpoint.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				0B8B6E1529434804003B4F96 /* CreateView.swift in Sources */,
 				0B5E31ED294B2D6D009B77F1 /* CreateValidator.swift in Sources */,
 				0B5E31F0294B5C13009B77F1 /* HapticsManager.swift in Sources */,
+				0BA9A50B294BC53500FBB315 /* Endpoint.swift in Sources */,
 				0BC04574293B406F008D32F6 /* SwiftUIWithMVVMHomeAssistantExmpleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
