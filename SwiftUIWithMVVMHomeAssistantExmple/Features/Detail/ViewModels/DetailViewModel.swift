@@ -20,7 +20,7 @@ final class DetailViewModel: ObservableObject {
             
             self.isLoading = true
             
-            NetworkigManager.shared.request("https://reqres.in/api/users/\(userId)?delay=2", type: UserResponse.self) { [weak self] res in
+            NetworkigManager.shared.request(.detail(is: userId), type: UserResponse.self) { [weak self] res in
                 defer { self?.isLoading = false }
                 switch res {
                 case .success(let response):

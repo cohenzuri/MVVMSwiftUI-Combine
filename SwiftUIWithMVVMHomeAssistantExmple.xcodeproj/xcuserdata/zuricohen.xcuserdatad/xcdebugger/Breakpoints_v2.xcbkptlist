@@ -7,49 +7,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D391CC4B-C4AA-402C-9CC2-10D64CF83D95"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/Create/Views/CreateView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EA66F175-C06E-450A-B56B-CD565253D01B"
+            uuid = "4CCD52EB-1A2A-4162-BE53-269F4F7815CC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/Create/ViewModels/CreateViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "create()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5D9708EF-7D24-413B-B448-2893E05FCB5A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/Create/ViewModels/CreateViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "create()"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4CCD52EB-1A2A-4162-BE53-269F4F7815CC - 92e75b7d941b2923"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftUIWithMVVMHomeAssistantExmple.CreateViewModel.create() -&gt; ()"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Create/ViewModels/CreateViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "571">
+               </Location>
+               <Location
+                  uuid = "4CCD52EB-1A2A-4162-BE53-269F4F7815CC - 9788a73748ef08ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in SwiftUIWithMVVMHomeAssistantExmple.CreateViewModel.create() -&gt; ()"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Create/ViewModels/CreateViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "209">
+               </Location>
+               <Location
+                  uuid = "4CCD52EB-1A2A-4162-BE53-269F4F7815CC - 59277a3a6f6a85c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in SwiftUIWithMVVMHomeAssistantExmple.CreateViewModel.create() -&gt; ()"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Create/ViewModels/CreateViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "135">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -27,7 +27,7 @@ final class CreateViewModel: ObservableObject {
             encoder.keyEncodingStrategy = .convertToSnakeCase
             let data = try? encoder.encode(user)
             
-            NetworkigManager.shared.request(methodType: .POST(data: data), "https://reqres.in/api/users?delay=3") { [weak self] res in
+            NetworkigManager.shared.request(.create(submissionData: data)) { [weak self] res in
                 
                 DispatchQueue.main.async {
                     
