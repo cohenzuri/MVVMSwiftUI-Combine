@@ -15,19 +15,18 @@ final class NetworkigManager {
     
     private init() {}
     
-    func request<T: Codable>(methodType: MethodType = .GET, _ absoluteURL: String, type: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+    func request<T: Codable>(_ endpoint: Endpoint, type: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
         
-        guard let url  = URL(string: absoluteURL) else {
+        guard let url  = endpoint.url else {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
         
-        let request = buildRequest(from: url, methodType: methodType)
+        let request = buildRequest(from: url, methodType: endpoint.methodType)
         
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
             
-            print("url: \(absoluteURL) response: \(String(describing: response?.description)), error: \(String(describing: error))")
-            
+
             if error != nil {
                 completion(.failure(NetworkingError.custom(error: error!)))
                 return
@@ -57,18 +56,16 @@ final class NetworkigManager {
         dataTask.resume()
     }
     
-    func request(methodType: MethodType = .GET, _ absoluteURL: String, completion: @escaping (Result<Void, Error>) -> Void) {
+    func request(_ endpoint: Endpoint, completion: @escaping (Result<Void, Error>) -> Void) {
         
-        guard let url  = URL(string: absoluteURL) else {
+        guard let url  = endpoint.url else {
             completion(.failure(NetworkingError.invalidUrl))
             return
         }
         
-        let request = buildRequest(from: url, methodType: methodType)
+        let request = buildRequest(from: url, methodType: endpoint.methodType)
         
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
-            
-            print("url: \(absoluteURL) response: \(String(describing: response?.description)), error: \(String(describing: error))")
             
             if error != nil {
                 completion(.failure(NetworkingError.custom(error: error!)))
@@ -121,7 +118,7 @@ extension NetworkigManager.NetworkingError {
 
 private extension NetworkigManager {
     
-    func buildRequest(from url: URL, methodType: MethodType) -> URLRequest {
+    func buildRequest(from url: URL, methodType: Endpoint.MethodType) -> URLRequest {
         
         var request = URLRequest(url: url)
         
