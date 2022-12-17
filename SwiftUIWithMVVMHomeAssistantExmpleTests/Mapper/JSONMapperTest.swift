@@ -12,6 +12,8 @@ import XCTest
 class JSONMapperTests: XCTestCase {
     
     func test_with_valid_json_successfully_decoded() {
+        
+        XCTAssertThrowsError(try StaticJSONMapper.decode(file: "", type: UsersResponse.self), "")
         XCTFail()
     }
     
