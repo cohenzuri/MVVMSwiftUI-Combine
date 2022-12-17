@@ -39,16 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "79806834-16A7-46A4-B6EB-E7648ED6A085"
+            uuid = "C2E5F6A1-FAEC-4803-A107-1C1414932661"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/User/View Models/PeopleViewModel.swift"
+            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Base/Api/NetworkingManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "fetchUsers()"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "request(_:type:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -48,7 +48,7 @@ extension Endpoint {
         switch self {
             
         case .people(page: let page):
-            return ["":"\(page)"]
+            return ["page":"\(page)"]
             
         default:
             return nil
