@@ -11,18 +11,29 @@ final class PeopleViewModel: ObservableObject {
     
     @Published private(set) var users: [User] = []
     @Published private(set) var error: NetworkigManager.NetworkingError?
+    @Published private(set) var viewState: ViewState?
     @Published var hasError = false
-    @Published private(set) var isLoading = false
+    
+    private var page = 1
+    private var totalPages: Int?
+    
+    var isLoading: Bool {
+        viewState == .loading
+    }
+   
+    var isFetching: Bool {
+        viewState == .fetching
+    }
     
     @MainActor
     func fetchUsers() async {
-        
-        self.isLoading = true
-        
-        defer { self.isLoading = false }
+        reset()
+        viewState = .loading
+        defer { viewState = .finished }
         
         do {
-            let response = try await NetworkigManager.shared.request(.people, type: UsersResponse.self)
+            let response = try await NetworkigManager.shared.request(.people(page: page), type: UsersResponse.self)
+            totalPages = response.totalPages
             users = response.data
         } catch {
             self.hasError = true
@@ -33,8 +44,55 @@ final class PeopleViewModel: ObservableObject {
             }
         }
     }
+    
+    @MainActor
+    func fetchNextSetOfUsers() async {
         
+        guard page != totalPages else { return }
+        
+        viewState = .fetching
+        defer { viewState = .finished }
+        
+        page += 1
+        
+        do {
+            let response = try await NetworkigManager.shared.request(.people(page: page), type: UsersResponse.self)
+            totalPages = response.totalPages
+            users += response.data
+        } catch {
+            self.hasError = true
+            if let networkingError = error as? NetworkigManager.NetworkingError {
+                self.error = networkingError
+            } else {
+                self.error = .custom(error: error)
+            }
+        }
+    }
+    
+    func hasReachedEnd(of user: User) -> Bool {
+        return users.last?.id == user.id
+    }
 }
 
+extension PeopleViewModel {
+    
+    enum ViewState {
+        case fetching
+        case loading
+        case finished
+    }
+}
+
+private extension PeopleViewModel {
+    
+    func reset() {
+        if viewState == .finished {
+            users.removeAll()
+            page = 1
+            totalPages = nil
+            viewState = nil
+        }
+    }
+}
     
 

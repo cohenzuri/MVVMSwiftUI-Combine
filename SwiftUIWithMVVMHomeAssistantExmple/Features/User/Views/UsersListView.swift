@@ -36,12 +36,25 @@ struct UsersListView: View {
                                 NavigationLink {
                                     DetailView(userID: user.id)
                                 } label: {
+                                    
                                     UserCellView(userData: user)
+                                        .task {
+                                            if vm.hasReachedEnd(of: user) && !vm.isFetching {
+                                                await vm.fetchNextSetOfUsers()
+                                            }
+                                        }
                                 }
                                 
                             }
-                        }.padding()
+                        }
+                        .padding()
                     }
+                    
+                    .overlay(alignment: .bottom, content: {
+                        if vm.isFetching {
+                            ProgressView()
+                        }
+                    })
                 }
             }
             
