@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B03BE3929510BD7004CBA1F /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */; };
+		0B03BE3A29510F5E004CBA1F /* NewUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF4B0D52947DF84002675CF /* NewUser.swift */; };
 		0B466C0129507A300063AC17 /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B466BFF29507A300063AC17 /* SingleUserData.json */; };
 		0B466C0229507A300063AC17 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B466C0029507A300063AC17 /* UsersStaticData.json */; };
+		0B466C06295091740063AC17 /* CreateFormValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B466C04295091740063AC17 /* CreateFormValidatorTest.swift */; };
 		0B5E31ED294B2D6D009B77F1 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */; };
 		0B5E31F0294B5C13009B77F1 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EF294B5C13009B77F1 /* HapticsManager.swift */; };
 		0B5E31F7294B67FD009B77F1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31F6294B67FD009B77F1 /* SettingsView.swift */; };
@@ -50,6 +53,7 @@
 /* Begin PBXFileReference section */
 		0B466BFF29507A300063AC17 /* SingleUserData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
 		0B466C0029507A300063AC17 /* UsersStaticData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
+		0B466C04295091740063AC17 /* CreateFormValidatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFormValidatorTest.swift; sourceTree = "<group>"; };
 		0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 		0B5E31EF294B5C13009B77F1 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		0B5E31F6294B67FD009B77F1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B466C03295091380063AC17 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				0B466C04295091740063AC17 /* CreateFormValidatorTest.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
 		0B5E31EB294B2D3A009B77F1 /* Validator */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +181,7 @@
 		0B8BA868294E10B900E9F2E0 /* SwiftUIWithMVVMHomeAssistantExmpleTests */ = {
 			isa = PBXGroup;
 			children = (
+				0B466C03295091380063AC17 /* Form */,
 				0B8BA870294E11D200E9F2E0 /* Mapper */,
 			);
 			path = SwiftUIWithMVVMHomeAssistantExmpleTests;
@@ -470,6 +483,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B466C06295091740063AC17 /* CreateFormValidatorTest.swift in Sources */,
+				0B03BE3A29510F5E004CBA1F /* NewUser.swift in Sources */,
+				0B03BE3929510BD7004CBA1F /* CreateValidator.swift in Sources */,
 				0B8BA872294E123F00E9F2E0 /* JSONMapperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

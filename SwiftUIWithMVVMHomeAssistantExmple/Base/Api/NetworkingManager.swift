@@ -8,7 +8,6 @@
 import Foundation
 
 // https://reqres.in/api/users?page=1
-
 // https://reqres.in/api/users/1?delay=2
 
 final class NetworkigManager {
