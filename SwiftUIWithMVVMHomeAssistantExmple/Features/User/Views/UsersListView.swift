@@ -97,10 +97,12 @@ struct UsersListView: View {
             }
         }
         .overlay {
+            
             if shouldShowSuccess {
                 CheckmarkPopoverView()
                     .transition(.scale.combined(with: .opacity))
                     .onAppear {
+                        
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                             withAnimation(.spring()) {
                                 self.shouldShowSuccess.toggle()

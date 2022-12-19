@@ -14,8 +14,7 @@ enum Endpoint {
 }
 
 extension Endpoint {
-    // https://reqres.in/api/users?page=1
-    
+
     var host: String { "reqres.in" }
     
     var path: String {
@@ -25,7 +24,7 @@ extension Endpoint {
         case .people:
             return "/api/users"
         case .detail(let id):
-            return "/api/users\(id)"
+            return "/api/users/\(id)"
         case .create:
             return "/api/users"
         }
@@ -53,7 +52,6 @@ extension Endpoint {
         default:
             return nil
         }
-        
     }
 }
 

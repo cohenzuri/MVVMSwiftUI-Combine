@@ -7,47 +7,236 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "33E836E4-FE3E-4C46-9E8C-7229276DF066"
-            shouldBeEnabled = "Yes"
+            uuid = "B7955C20-0BCD-43EF-AFC2-57169DA7DE42"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/User/View Models/PeopleViewModel.swift"
+            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Base/Mapper/StaticJSONMapper.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "fetchNextSetOfUsers()"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "decode(file:type:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D3A30A89-D8AB-4049-A8ED-6CBA155BFA68"
+            uuid = "3FA25566-FB24-4AF1-9728-2F2EA833562D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/User/View Models/PeopleViewModel.swift"
+            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/ViewModels/DetailViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "fetchNextSetOfUsers()"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "fetchDetails(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3FA25566-FB24-4AF1-9728-2F2EA833562D - 8a3cdf5fc2ed1f5b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for SwiftUIWithMVVMHomeAssistantExmple.DetailViewModel.fetchDetails(for: Swift.Int) async -&gt; ()"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/ViewModels/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  uuid = "3FA25566-FB24-4AF1-9728-2F2EA833562D - 4232c51a6705d18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for SwiftUIWithMVVMHomeAssistantExmple.DetailViewModel.fetchDetails(for: Swift.Int) async -&gt; ()"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/ViewModels/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "3FA25566-FB24-4AF1-9728-2F2EA833562D - 14adfd919f89b329"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for SwiftUIWithMVVMHomeAssistantExmple.DetailViewModel.fetchDetails(for: Swift.Int) async -&gt; ()"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/ViewModels/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "130">
+               </Location>
+               <Location
+                  uuid = "3FA25566-FB24-4AF1-9728-2F2EA833562D - ea55633081fa0136"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for SwiftUIWithMVVMHomeAssistantExmple.DetailViewModel.fetchDetails(for: Swift.Int) async -&gt; ()"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/ViewModels/DetailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "129">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40C99E7E-A143-48DB-A23F-22C2B07746C3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/Views/DetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "40C99E7E-A143-48DB-A23F-22C2B07746C3 - dece83dfba777734"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #2 @Sendable () async -&gt; () in SwiftUIWithMVVMHomeAssistantExmple.DetailView.body.getter : some"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/Views/DetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  uuid = "40C99E7E-A143-48DB-A23F-22C2B07746C3 - 31392f4a760e0b24"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #2 @Sendable () async -&gt; () in SwiftUIWithMVVMHomeAssistantExmple.DetailView.body.getter : some"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/Views/DetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "40C99E7E-A143-48DB-A23F-22C2B07746C3 - b865d494c25f3336"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #2 @Sendable () async -&gt; () in SwiftUIWithMVVMHomeAssistantExmple.DetailView.body.getter : some"
+                  moduleName = "SwiftUIWithMVVMHomeAssistantExmple"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zuricohen/Desktop/lerning%20swiftUI%20with%20mvvm/SwiftUIWithMVVMHomeAssistantExmple/SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/Views/DetailView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03AB414C-1573-4AA9-8AC2-18C6874273AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/ViewModels/DetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "fetchDetails(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C2E5F6A1-FAEC-4803-A107-1C1414932661"
+            uuid = "BC1649A0-A58B-4A43-BB8B-048A7CD25349"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Features/Detail/ViewModels/DetailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchDetails(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F110A99F-6AC2-4D0D-9AA2-2EC697D347C9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftUIWithMVVMHomeAssistantExmple/Base/Api/NetworkingManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "request(_:type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "873FA03A-6011-4C44-826F-5C124F233E56"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Base/Api/NetworkingManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "request(_:type:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "971967B8-1CB8-42A3-8403-4019EB8A5C12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUIWithMVVMHomeAssistantExmple/Base/Api/NetworkingManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "request(_:type:)"
             landmarkType = "7">
          </BreakpointContent>

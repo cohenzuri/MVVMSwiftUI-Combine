@@ -38,6 +38,7 @@ struct DetailView: View {
         }
         
         .navigationTitle("Details")
+        
         .task {
             await vm.fetchDetails(for: userID)
         }

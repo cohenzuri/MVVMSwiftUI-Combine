@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B466C0129507A300063AC17 /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B466BFF29507A300063AC17 /* SingleUserData.json */; };
+		0B466C0229507A300063AC17 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B466C0029507A300063AC17 /* UsersStaticData.json */; };
 		0B5E31ED294B2D6D009B77F1 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */; };
 		0B5E31F0294B5C13009B77F1 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EF294B5C13009B77F1 /* HapticsManager.swift */; };
 		0B5E31F7294B67FD009B77F1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31F6294B67FD009B77F1 /* SettingsView.swift */; };
@@ -14,8 +16,6 @@
 		0B8B6E1829434D74003B4F96 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */; };
 		0B8BA872294E123F00E9F2E0 /* JSONMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA871294E123F00E9F2E0 /* JSONMapperTest.swift */; };
 		0B8BA875294E281000E9F2E0 /* StaticJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA874294E281000E9F2E0 /* StaticJSONMapper.swift */; };
-		0B8BA878294E293800E9F2E0 /* UserStaticData.json in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA877294E293800E9F2E0 /* UserStaticData.json */; };
-		0B8BA87A294E295400E9F2E0 /* SingleUserData.json in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA879294E295400E9F2E0 /* SingleUserData.json */; };
 		0B9B1A50294149DE0094F412 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B1A4F294149DE0094F412 /* DetailView.swift */; };
 		0BA9A508294BC24E00FBB315 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */; };
 		0BA9A50B294BC53500FBB315 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A50A294BC53500FBB315 /* Endpoint.swift */; };
@@ -48,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B466BFF29507A300063AC17 /* SingleUserData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
+		0B466C0029507A300063AC17 /* UsersStaticData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = UsersStaticData.json; sourceTree = "<group>"; };
 		0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 		0B5E31EF294B5C13009B77F1 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		0B5E31F6294B67FD009B77F1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -56,8 +58,6 @@
 		0B8BA867294E10B800E9F2E0 /* SwiftUIWithMVVMHomeAssistantExmpleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIWithMVVMHomeAssistantExmpleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8BA871294E123F00E9F2E0 /* JSONMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapperTest.swift; sourceTree = "<group>"; };
 		0B8BA874294E281000E9F2E0 /* StaticJSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticJSONMapper.swift; sourceTree = "<group>"; };
-		0B8BA877294E293800E9F2E0 /* UserStaticData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserStaticData.json; sourceTree = "<group>"; };
-		0B8BA879294E295400E9F2E0 /* SingleUserData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SingleUserData.json; sourceTree = "<group>"; };
 		0B9B1A4F294149DE0094F412 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		0BA9A50A294BC53500FBB315 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -193,8 +193,6 @@
 		0B8BA876294E291700E9F2E0 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				0B8BA877294E293800E9F2E0 /* UserStaticData.json */,
-				0B8BA879294E295400E9F2E0 /* SingleUserData.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -284,6 +282,8 @@
 		0BC8AF57293CCFBD00D24A67 /* Resoureces */ = {
 			isa = PBXGroup;
 			children = (
+				0B466BFF29507A300063AC17 /* SingleUserData.json */,
+				0B466C0029507A300063AC17 /* UsersStaticData.json */,
 				0B8BA876294E291700E9F2E0 /* JSON */,
 				0BC8AF55293CCF6C00D24A67 /* Theme.swift */,
 				0BC8AF53293CCF6900D24A67 /* Symbols.swift */,
@@ -456,6 +456,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B466C0229507A300063AC17 /* UsersStaticData.json in Resources */,
+				0B466C0129507A300063AC17 /* SingleUserData.json in Resources */,
 				0BC0457B293B4070008D32F6 /* Preview Assets.xcassets in Resources */,
 				0BC04578293B4070008D32F6 /* Assets.xcassets in Resources */,
 			);
@@ -477,7 +479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B8BA875294E281000E9F2E0 /* StaticJSONMapper.swift in Sources */,
-				0B8BA87A294E295400E9F2E0 /* SingleUserData.json in Sources */,
 				0BF4B0D82947E01B002675CF /* CreateViewModel.swift in Sources */,
 				0BC8AF54293CCF6A00D24A67 /* Symbols.swift in Sources */,
 				0BC8AF63293D16E200D24A67 /* UserCellView.swift in Sources */,
@@ -493,7 +494,6 @@
 				0B8B6E1829434D74003B4F96 /* NetworkingManager.swift in Sources */,
 				0BB2FD4F294648A10092BBCF /* DetailViewModel.swift in Sources */,
 				0BF4B0D62947DF84002675CF /* NewUser.swift in Sources */,
-				0B8BA878294E293800E9F2E0 /* UserStaticData.json in Sources */,
 				0BC8AF67293D1AC400D24A67 /* PillView.swift in Sources */,
 				0BC04576293B406F008D32F6 /* ContentView.swift in Sources */,
 				0B8B6E1529434804003B4F96 /* CreateView.swift in Sources */,
