@@ -14,7 +14,7 @@ enum Endpoint {
 }
 
 extension Endpoint {
-
+    
     var host: String { "reqres.in" }
     
     var path: String {
@@ -63,22 +63,25 @@ extension Endpoint {
         urlComponents.host = host
         urlComponents.path = path
         
-        var requestQueryItem = queryItems?.compactMap { item in
-            URLQueryItem(name: item.key, value: item.value)
+        var requestQueryItems = [URLQueryItem]()
+        
+        queryItems?.forEach { item in
+            requestQueryItems.append(URLQueryItem(name: item.key, value: item.value))
         }
         
 #if DEBUG
-        requestQueryItem?.append(URLQueryItem(name: "delay", value: "1"))
+        requestQueryItems.append(URLQueryItem(name: "delay", value: "2"))
 #endif
         
-        urlComponents.queryItems = requestQueryItem
+        urlComponents.queryItems = requestQueryItems
+        
         return urlComponents.url
     }
 }
 
 extension Endpoint  {
     
-    enum MethodType {
+    enum MethodType: Equatable {
         case GET
         case POST(data: Data?)
     }

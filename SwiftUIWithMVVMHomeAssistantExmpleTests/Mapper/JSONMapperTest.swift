@@ -68,8 +68,5 @@ class JSONMapperTests: XCTestCase {
             }
         }
     }
-    
-    
-    
 }
 

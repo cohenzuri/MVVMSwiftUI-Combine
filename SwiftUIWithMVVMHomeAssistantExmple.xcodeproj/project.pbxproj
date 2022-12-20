@@ -22,6 +22,7 @@
 		0B9B1A50294149DE0094F412 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B1A4F294149DE0094F412 /* DetailView.swift */; };
 		0BA9A508294BC24E00FBB315 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */; };
 		0BA9A50B294BC53500FBB315 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A50A294BC53500FBB315 /* Endpoint.swift */; };
+		0BAFA2212951BB08006C5A7B /* NetworkingEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAFA2202951BB08006C5A7B /* NetworkingEndpointTest.swift */; };
 		0BB2FD4D2945D2C80092BBCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2FD4C2945D2C80092BBCF /* User.swift */; };
 		0BB2FD4F294648A10092BBCF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2FD4E294648A10092BBCF /* DetailViewModel.swift */; };
 		0BBFEFFE294A702400B72FBF /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFEFFD294A702400B72FBF /* CheckmarkPopoverView.swift */; };
@@ -65,6 +66,7 @@
 		0B9B1A4F294149DE0094F412 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		0BA9A50A294BC53500FBB315 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		0BAFA2202951BB08006C5A7B /* NetworkingEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEndpointTest.swift; sourceTree = "<group>"; };
 		0BB2FD4C2945D2C80092BBCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0BB2FD4E294648A10092BBCF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		0BBFEFFD294A702400B72FBF /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
@@ -127,13 +129,6 @@
 			path = Haptics;
 			sourceTree = "<group>";
 		};
-		0B5E31F1294B675A009B77F1 /* Se */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Se;
-			sourceTree = "<group>";
-		};
 		0B8B6E10294347C1003B4F96 /* Create */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +176,7 @@
 		0B8BA868294E10B900E9F2E0 /* SwiftUIWithMVVMHomeAssistantExmpleTests */ = {
 			isa = PBXGroup;
 			children = (
+				0BAFA21E2951BAB1006C5A7B /* Networking */,
 				0B466C03295091380063AC17 /* Form */,
 				0B8BA870294E11D200E9F2E0 /* Mapper */,
 			);
@@ -251,6 +247,22 @@
 			path = UserDefault;
 			sourceTree = "<group>";
 		};
+		0BAFA21E2951BAB1006C5A7B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0BAFA21F2951BABE006C5A7B /* Endpoint */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		0BAFA21F2951BABE006C5A7B /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				0BAFA2202951BB08006C5A7B /* NetworkingEndpointTest.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
 		0BC04567293B406E008D32F6 = {
 			isa = PBXGroup;
 			children = (
@@ -307,7 +319,6 @@
 		0BC8AF58293CD4D900D24A67 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				0B5E31F1294B675A009B77F1 /* Se */,
 				0B8B6E10294347C1003B4F96 /* Create */,
 				0B9B1A4B294149610094F412 /* Detail */,
 				0BC8AF5A293CDCAA00D24A67 /* User */,
@@ -486,6 +497,7 @@
 				0B466C06295091740063AC17 /* CreateFormValidatorTest.swift in Sources */,
 				0B03BE3A29510F5E004CBA1F /* NewUser.swift in Sources */,
 				0B03BE3929510BD7004CBA1F /* CreateValidator.swift in Sources */,
+				0BAFA2212951BB08006C5A7B /* NetworkingEndpointTest.swift in Sources */,
 				0B8BA872294E123F00E9F2E0 /* JSONMapperTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
