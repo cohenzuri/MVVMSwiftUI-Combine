@@ -15,6 +15,7 @@
 		0B5E31ED294B2D6D009B77F1 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */; };
 		0B5E31F0294B5C13009B77F1 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EF294B5C13009B77F1 /* HapticsManager.swift */; };
 		0B5E31F7294B67FD009B77F1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31F6294B67FD009B77F1 /* SettingsView.swift */; };
+		0B63CB722952FC74002EB41B /* NetworkingManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63CB712952FC74002EB41B /* NetworkingManagerTest.swift */; };
 		0B8B6E1529434804003B4F96 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1429434804003B4F96 /* CreateView.swift */; };
 		0B8B6E1829434D74003B4F96 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */; };
 		0B8BA872294E123F00E9F2E0 /* JSONMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA871294E123F00E9F2E0 /* JSONMapperTest.swift */; };
@@ -23,6 +24,7 @@
 		0BA9A508294BC24E00FBB315 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */; };
 		0BA9A50B294BC53500FBB315 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A50A294BC53500FBB315 /* Endpoint.swift */; };
 		0BAFA2212951BB08006C5A7B /* NetworkingEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAFA2202951BB08006C5A7B /* NetworkingEndpointTest.swift */; };
+		0BAFA22429520EF3006C5A7B /* MockURLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAFA22329520EF3006C5A7B /* MockURLSessionProtocol.swift */; };
 		0BB2FD4D2945D2C80092BBCF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2FD4C2945D2C80092BBCF /* User.swift */; };
 		0BB2FD4F294648A10092BBCF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2FD4E294648A10092BBCF /* DetailViewModel.swift */; };
 		0BBFEFFE294A702400B72FBF /* CheckmarkPopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBFEFFD294A702400B72FBF /* CheckmarkPopoverView.swift */; };
@@ -58,6 +60,7 @@
 		0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateValidator.swift; sourceTree = "<group>"; };
 		0B5E31EF294B5C13009B77F1 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		0B5E31F6294B67FD009B77F1 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		0B63CB712952FC74002EB41B /* NetworkingManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManagerTest.swift; sourceTree = "<group>"; };
 		0B8B6E1429434804003B4F96 /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		0B8BA867294E10B800E9F2E0 /* SwiftUIWithMVVMHomeAssistantExmpleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIWithMVVMHomeAssistantExmpleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +70,7 @@
 		0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		0BA9A50A294BC53500FBB315 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0BAFA2202951BB08006C5A7B /* NetworkingEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEndpointTest.swift; sourceTree = "<group>"; };
+		0BAFA22329520EF3006C5A7B /* MockURLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionProtocol.swift; sourceTree = "<group>"; };
 		0BB2FD4C2945D2C80092BBCF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0BB2FD4E294648A10092BBCF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		0BBFEFFD294A702400B72FBF /* CheckmarkPopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckmarkPopoverView.swift; sourceTree = "<group>"; };
@@ -250,7 +254,9 @@
 		0BAFA21E2951BAB1006C5A7B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0BAFA22229520A58006C5A7B /* Mocks */,
 				0BAFA21F2951BABE006C5A7B /* Endpoint */,
+				0B63CB712952FC74002EB41B /* NetworkingManagerTest.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -261,6 +267,14 @@
 				0BAFA2202951BB08006C5A7B /* NetworkingEndpointTest.swift */,
 			);
 			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		0BAFA22229520A58006C5A7B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				0BAFA22329520EF3006C5A7B /* MockURLSessionProtocol.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		0BC04567293B406E008D32F6 = {
@@ -496,9 +510,11 @@
 			files = (
 				0B466C06295091740063AC17 /* CreateFormValidatorTest.swift in Sources */,
 				0B03BE3A29510F5E004CBA1F /* NewUser.swift in Sources */,
+				0BAFA22429520EF3006C5A7B /* MockURLSessionProtocol.swift in Sources */,
 				0B03BE3929510BD7004CBA1F /* CreateValidator.swift in Sources */,
 				0BAFA2212951BB08006C5A7B /* NetworkingEndpointTest.swift in Sources */,
 				0B8BA872294E123F00E9F2E0 /* JSONMapperTest.swift in Sources */,
+				0B63CB722952FC74002EB41B /* NetworkingManagerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

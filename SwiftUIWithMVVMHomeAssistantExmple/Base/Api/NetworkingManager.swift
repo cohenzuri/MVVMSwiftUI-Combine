@@ -16,7 +16,7 @@ final class NetworkigManager {
     
     private init() {}
     
-    func request<T: Codable>(_ endpoint: Endpoint, type: T.Type)  async throws -> T {
+    func request<T: Codable>(session: URLSession = .shared, _ endpoint: Endpoint, type: T.Type)  async throws -> T {
         
         guard let url  = endpoint.url else {
             throw NetworkingError.invalidUrl
@@ -24,7 +24,7 @@ final class NetworkigManager {
         
         let request = buildRequest(from: url, methodType: endpoint.methodType)
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await session.data(for: request)
         
         guard let response = response as? HTTPURLResponse,
               (200...300 ) ~= response.statusCode else {
@@ -39,14 +39,14 @@ final class NetworkigManager {
         return res
     }
     
-    func request(_ endpoint: Endpoint) async throws -> Void {
+    func request(session: URLSession = .shared,_ endpoint: Endpoint) async throws -> Void {
         
         guard let url  = endpoint.url else {
             throw NetworkingError.invalidUrl
         }
         
         let request = buildRequest(from: url, methodType: endpoint.methodType)
-        let (_, response) = try await URLSession.shared.data(for: request)
+        let (_, response) = try await session.data(for: request)
         
         guard let response = response as? HTTPURLResponse,
               (200...300 ) ~= response.statusCode else {
