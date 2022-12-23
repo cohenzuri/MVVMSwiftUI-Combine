@@ -28,7 +28,7 @@ final class CreateViewModel: ObservableObject {
             encoder.keyEncodingStrategy = .convertToSnakeCase
             let data = try encoder.encode(user)
             
-            try await NetworkigManager.shared.request(.create(submissionData: data))
+            try await NetworkingManager.shared.request(.create(submissionData: data))
             
             state = .successful
             
@@ -39,8 +39,8 @@ final class CreateViewModel: ObservableObject {
             
             switch error {
                 
-            case is NetworkigManager.NetworkingError:
-                self.error = .networking(error: error as! NetworkigManager.NetworkingError)
+            case is NetworkingManager.NetworkingError:
+                self.error = .networking(error: error as! NetworkingManager.NetworkingError)
                 
             case is CreateValidator.CreateValidatorError:
                 self.error = .validation(error: error as! CreateValidator.CreateValidatorError)

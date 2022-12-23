@@ -10,7 +10,7 @@ import Foundation
 final class PeopleViewModel: ObservableObject {
     
     @Published private(set) var users: [User] = []
-    @Published private(set) var error: NetworkigManager.NetworkingError?
+    @Published private(set) var error: NetworkingManager.NetworkingError?
     @Published private(set) var viewState: ViewState?
     @Published var hasError = false
     
@@ -32,12 +32,12 @@ final class PeopleViewModel: ObservableObject {
         defer { viewState = .finished }
         
         do {
-            let response = try await NetworkigManager.shared.request(.people(page: page), type: UsersResponse.self)
+            let response = try await NetworkingManager.shared.request(.people(page: page), type: UsersResponse.self)
             totalPages = response.totalPages
             users = response.data
         } catch {
             self.hasError = true
-            if let networkingError = error as? NetworkigManager.NetworkingError {
+            if let networkingError = error as? NetworkingManager.NetworkingError {
                 self.error = networkingError
             } else {
                 self.error = .custom(error: error)
@@ -56,12 +56,12 @@ final class PeopleViewModel: ObservableObject {
         page += 1
         
         do {
-            let response = try await NetworkigManager.shared.request(.people(page: page), type: UsersResponse.self)
+            let response = try await NetworkingManager.shared.request(.people(page: page), type: UsersResponse.self)
             totalPages = response.totalPages
             users += response.data
         } catch {
             self.hasError = true
-            if let networkingError = error as? NetworkigManager.NetworkingError {
+            if let networkingError = error as? NetworkingManager.NetworkingError {
                 self.error = networkingError
             } else {
                 self.error = .custom(error: error)

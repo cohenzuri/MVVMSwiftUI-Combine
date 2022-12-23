@@ -7,16 +7,13 @@
 
 import Foundation
 
-// https://reqres.in/api/users?page=1
-// https://reqres.in/api/users/1?delay=2
-
-final class NetworkigManager {
+final class NetworkingManager {
     
-    static let shared = NetworkigManager()
+    static let shared = NetworkingManager()
     
     private init() {}
     
-    func request<T: Codable>(_ endpoint: Endpoint, type: T.Type)  async throws -> T {
+    func request<T: Codable>(session: URLSession = .shared, _ endpoint: Endpoint, type: T.Type)  async throws -> T {
         
         guard let url  = endpoint.url else {
             throw NetworkingError.invalidUrl
@@ -24,7 +21,7 @@ final class NetworkigManager {
         
         let request = buildRequest(from: url, methodType: endpoint.methodType)
         
-        let (data, response) = try await URLSession.shared.data(for: request)
+        let (data, response) = try await session.data(for: request)
         
         guard let response = response as? HTTPURLResponse,
               (200...300 ) ~= response.statusCode else {
@@ -39,14 +36,14 @@ final class NetworkigManager {
         return res
     }
     
-    func request(_ endpoint: Endpoint) async throws -> Void {
+    func request(session: URLSession = .shared,_ endpoint: Endpoint) async throws -> Void {
         
         guard let url  = endpoint.url else {
             throw NetworkingError.invalidUrl
         }
         
         let request = buildRequest(from: url, methodType: endpoint.methodType)
-        let (_, response) = try await URLSession.shared.data(for: request)
+        let (_, response) = try await session.data(for: request)
         
         guard let response = response as? HTTPURLResponse,
               (200...300 ) ~= response.statusCode else {
@@ -56,9 +53,10 @@ final class NetworkigManager {
     }
 }
 
-extension NetworkigManager {
+extension NetworkingManager {
     
     enum NetworkingError: LocalizedError {
+       
         case invalidUrl
         case custom(error: Error)
         case invalidStatusCode(statusCode: Int)
@@ -67,7 +65,7 @@ extension NetworkigManager {
     }
 }
 
-extension NetworkigManager.NetworkingError {
+extension NetworkingManager.NetworkingError {
     
     var errorDescription: String? {
         
@@ -87,7 +85,7 @@ extension NetworkigManager.NetworkingError {
     }
 }
 
-private extension NetworkigManager {
+private extension NetworkingManager {
     
     func buildRequest(from url: URL, methodType: Endpoint.MethodType) -> URLRequest {
         
@@ -103,3 +101,23 @@ private extension NetworkigManager {
         return request
     }
 }
+
+extension NetworkingManager.NetworkingError: Equatable {
+    
+    static func == (lhs: NetworkingManager.NetworkingError, rhs: NetworkingManager.NetworkingError) -> Bool {
+        switch(lhs, rhs) {
+        case (.invalidUrl, .invalidUrl):
+            return true
+        case (.custom(let lhsType), .custom(let rhsType)):
+            return lhsType.localizedDescription == rhsType.localizedDescription
+        case (.invalidStatusCode(let lhsType), .invalidStatusCode(let rhsType)):
+            return lhsType == rhsType
+        case (.invalidData, .invalidData):
+            return true
+        case (.failedToDecode(let lhsType), .failedToDecode(let rhsType)):
+            return lhsType.localizedDescription == rhsType.localizedDescription
+        default:
+            return false
+        }
+    }
+}   
