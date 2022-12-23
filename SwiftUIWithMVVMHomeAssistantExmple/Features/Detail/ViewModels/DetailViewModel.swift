@@ -10,7 +10,7 @@ import Foundation
 final class DetailViewModel: ObservableObject {
     
     @Published private(set) var userInfo: UserResponse?
-    @Published private(set) var error: NetworkigManager.NetworkingError?
+    @Published private(set) var error: NetworkingManager.NetworkingError?
     @Published var hasError = false
     @Published private(set) var isLoading = false
     
@@ -22,11 +22,11 @@ final class DetailViewModel: ObservableObject {
         defer { self.isLoading = false }
         
         do {
-            let response = try await NetworkigManager.shared.request(.detail(is: userId), type: UserResponse.self)
+            let response = try await NetworkingManager.shared.request(.detail(is: userId), type: UserResponse.self)
             self.userInfo = response
         } catch {
             self.hasError = true
-            if let networkingError = error as? NetworkigManager.NetworkingError {
+            if let networkingError = error as? NetworkingManager.NetworkingError {
                 self.error = networkingError
             } else {
                 self.error = .custom(error: error)

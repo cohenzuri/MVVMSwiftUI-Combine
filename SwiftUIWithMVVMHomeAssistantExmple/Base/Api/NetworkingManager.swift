@@ -7,12 +7,9 @@
 
 import Foundation
 
-// https://reqres.in/api/users?page=1
-// https://reqres.in/api/users/1?delay=2
-
-final class NetworkigManager {
+final class NetworkingManager {
     
-    static let shared = NetworkigManager()
+    static let shared = NetworkingManager()
     
     private init() {}
     
@@ -56,9 +53,10 @@ final class NetworkigManager {
     }
 }
 
-extension NetworkigManager {
+extension NetworkingManager {
     
     enum NetworkingError: LocalizedError {
+       
         case invalidUrl
         case custom(error: Error)
         case invalidStatusCode(statusCode: Int)
@@ -67,7 +65,7 @@ extension NetworkigManager {
     }
 }
 
-extension NetworkigManager.NetworkingError {
+extension NetworkingManager.NetworkingError {
     
     var errorDescription: String? {
         
@@ -87,7 +85,7 @@ extension NetworkigManager.NetworkingError {
     }
 }
 
-private extension NetworkigManager {
+private extension NetworkingManager {
     
     func buildRequest(from url: URL, methodType: Endpoint.MethodType) -> URLRequest {
         
@@ -103,3 +101,23 @@ private extension NetworkigManager {
         return request
     }
 }
+
+extension NetworkingManager.NetworkingError: Equatable {
+    
+    static func == (lhs: NetworkingManager.NetworkingError, rhs: NetworkingManager.NetworkingError) -> Bool {
+        switch(lhs, rhs) {
+        case (.invalidUrl, .invalidUrl):
+            return true
+        case (.custom(let lhsType), .custom(let rhsType)):
+            return lhsType.localizedDescription == rhsType.localizedDescription
+        case (.invalidStatusCode(let lhsType), .invalidStatusCode(let rhsType)):
+            return lhsType == rhsType
+        case (.invalidData, .invalidData):
+            return true
+        case (.failedToDecode(let lhsType), .failedToDecode(let rhsType)):
+            return lhsType.localizedDescription == rhsType.localizedDescription
+        default:
+            return false
+        }
+    }
+}   

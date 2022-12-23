@@ -12,10 +12,15 @@
 		0B466C0129507A300063AC17 /* SingleUserData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B466BFF29507A300063AC17 /* SingleUserData.json */; };
 		0B466C0229507A300063AC17 /* UsersStaticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0B466C0029507A300063AC17 /* UsersStaticData.json */; };
 		0B466C06295091740063AC17 /* CreateFormValidatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B466C04295091740063AC17 /* CreateFormValidatorTest.swift */; };
+		0B5D910D295316A00032272D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB2FD4C2945D2C80092BBCF /* User.swift */; };
+		0B5D910E295319E10032272D /* StaticJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA874294E281000E9F2E0 /* StaticJSONMapper.swift */; };
 		0B5E31ED294B2D6D009B77F1 /* CreateValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EC294B2D6D009B77F1 /* CreateValidator.swift */; };
 		0B5E31F0294B5C13009B77F1 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31EF294B5C13009B77F1 /* HapticsManager.swift */; };
 		0B5E31F7294B67FD009B77F1 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E31F6294B67FD009B77F1 /* SettingsView.swift */; };
 		0B63CB722952FC74002EB41B /* NetworkingManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B63CB712952FC74002EB41B /* NetworkingManagerTest.swift */; };
+		0B63CB7329530785002EB41B /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */; };
+		0B63CB74295307F9002EB41B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A50A294BC53500FBB315 /* Endpoint.swift */; };
+		0B63CB7529530845002EB41B /* UsersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC8AF68293D501500D24A67 /* UsersResponse.swift */; };
 		0B8B6E1529434804003B4F96 /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1429434804003B4F96 /* CreateView.swift */; };
 		0B8B6E1829434D74003B4F96 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8B6E1729434D74003B4F96 /* NetworkingManager.swift */; };
 		0B8BA872294E123F00E9F2E0 /* JSONMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA871294E123F00E9F2E0 /* JSONMapperTest.swift */; };
@@ -509,12 +514,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B466C06295091740063AC17 /* CreateFormValidatorTest.swift in Sources */,
+				0B63CB7529530845002EB41B /* UsersResponse.swift in Sources */,
+				0B63CB74295307F9002EB41B /* Endpoint.swift in Sources */,
 				0B03BE3A29510F5E004CBA1F /* NewUser.swift in Sources */,
 				0BAFA22429520EF3006C5A7B /* MockURLSessionProtocol.swift in Sources */,
 				0B03BE3929510BD7004CBA1F /* CreateValidator.swift in Sources */,
 				0BAFA2212951BB08006C5A7B /* NetworkingEndpointTest.swift in Sources */,
+				0B63CB7329530785002EB41B /* NetworkingManager.swift in Sources */,
+				0B5D910E295319E10032272D /* StaticJSONMapper.swift in Sources */,
 				0B8BA872294E123F00E9F2E0 /* JSONMapperTest.swift in Sources */,
 				0B63CB722952FC74002EB41B /* NetworkingManagerTest.swift in Sources */,
+				0B5D910D295316A00032272D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

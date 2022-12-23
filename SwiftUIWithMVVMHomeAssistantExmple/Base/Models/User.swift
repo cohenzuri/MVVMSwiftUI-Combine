@@ -12,7 +12,7 @@ struct UserResponse: Codable {
 }
 
 // MARK: - Datum
-struct User: Codable {
+struct User: Codable, Equatable {
     let id: Int
     let email, firstName, lastName: String?
     let avatar: String
@@ -26,7 +26,7 @@ struct User: Codable {
 }
 
 // MARK: - Support
-struct Support: Codable {
+struct Support: Codable, Equatable {
     let url: String
     let text: String
 }
