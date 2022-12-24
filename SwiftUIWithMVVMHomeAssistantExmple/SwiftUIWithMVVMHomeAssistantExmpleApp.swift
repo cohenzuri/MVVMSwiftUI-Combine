@@ -14,10 +14,23 @@ struct SwiftUIWithMVVMHomeAssistantExmpleApp: App {
         WindowGroup {
             
             TabView {
+                
                 UsersListView()
                     .tabItem {
-                        Symbols.person
-                        Text("Home")
+                        Symbols.home
+                    }
+                    
+                    .accentColor(Color.white)
+                
+                UsersListView()
+                    .tabItem {
+                        Symbols.search
+                    }
+                
+                
+                UsersListView()
+                    .tabItem {
+                        Symbols.profile
                     }
                 
                 SettingsView()
@@ -25,7 +38,9 @@ struct SwiftUIWithMVVMHomeAssistantExmpleApp: App {
                         Symbols.gear
                         Text("Settings")
                     }
-            }
+
+            }.accentColor(.white)
+
         }
     }
 }

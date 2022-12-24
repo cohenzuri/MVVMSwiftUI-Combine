@@ -19,7 +19,7 @@ struct StorysListView: View {
         
         ScrollView(.horizontal, showsIndicators: true) {
             
-            HStack(spacing: 20) {
+            HStack(spacing: 10) {
                 
                 ForEach(vm.users, id: \.id) { user in
                 

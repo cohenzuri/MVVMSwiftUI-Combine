@@ -61,11 +61,13 @@ struct UsersListView: View {
                     })
                 }
             }
-            
-            .navigationTitle("People")
-            
+           
             .toolbar {
-               
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    title
+                }
+                
                 ToolbarItem(placement: .primaryAction) {
                     add
                 }
@@ -108,7 +110,7 @@ struct UsersListView: View {
                     .transition(.scale.combined(with: .opacity))
                     .onAppear {
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) {
                             withAnimation(.spring()) {
                                 self.shouldShowSuccess.toggle()
                             }
@@ -175,6 +177,17 @@ private extension UsersListView {
                 )
         }
         .disabled(vm.isLoading)
+    }
+    
+    var title: some View {
+        
+        Button {
+            
+        } label: {
+           Image("instagram_title")
+            
+        }
+        
     }
     
     var background: some View {
