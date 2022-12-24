@@ -26,6 +26,7 @@
 		0B8BA872294E123F00E9F2E0 /* JSONMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA871294E123F00E9F2E0 /* JSONMapperTest.swift */; };
 		0B8BA875294E281000E9F2E0 /* StaticJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA874294E281000E9F2E0 /* StaticJSONMapper.swift */; };
 		0B9B1A50294149DE0094F412 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B1A4F294149DE0094F412 /* DetailView.swift */; };
+		0BA664302957180F007EBAFB /* StorysListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6642F2957180F007EBAFB /* StorysListView.swift */; };
 		0BA9A508294BC24E00FBB315 /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */; };
 		0BA9A50B294BC53500FBB315 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA9A50A294BC53500FBB315 /* Endpoint.swift */; };
 		0BAFA2212951BB08006C5A7B /* NetworkingEndpointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAFA2202951BB08006C5A7B /* NetworkingEndpointTest.swift */; };
@@ -72,6 +73,7 @@
 		0B8BA871294E123F00E9F2E0 /* JSONMapperTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONMapperTest.swift; sourceTree = "<group>"; };
 		0B8BA874294E281000E9F2E0 /* StaticJSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticJSONMapper.swift; sourceTree = "<group>"; };
 		0B9B1A4F294149DE0094F412 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		0BA6642F2957180F007EBAFB /* StorysListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorysListView.swift; sourceTree = "<group>"; };
 		0BA9A507294BC24E00FBB315 /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		0BA9A50A294BC53500FBB315 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0BAFA2202951BB08006C5A7B /* NetworkingEndpointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingEndpointTest.swift; sourceTree = "<group>"; };
@@ -248,6 +250,38 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		0BA6642B295717A0007EBAFB /* Storys */ = {
+			isa = PBXGroup;
+			children = (
+				0BA6642D295717D9007EBAFB /* ViewModel */,
+				0BA6642E295717E3007EBAFB /* Models */,
+				0BA6642C295717CA007EBAFB /* Views */,
+			);
+			path = Storys;
+			sourceTree = "<group>";
+		};
+		0BA6642C295717CA007EBAFB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0BA6642F2957180F007EBAFB /* StorysListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BA6642D295717D9007EBAFB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0BA6642E295717E3007EBAFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0BA9A509294BC2AA00FBB315 /* UserDefault */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +372,7 @@
 		0BC8AF58293CD4D900D24A67 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				0BA6642B295717A0007EBAFB /* Storys */,
 				0B8B6E10294347C1003B4F96 /* Create */,
 				0B9B1A4B294149610094F412 /* Detail */,
 				0BC8AF5A293CDCAA00D24A67 /* User */,
@@ -550,6 +585,7 @@
 				0BF4B0D62947DF84002675CF /* NewUser.swift in Sources */,
 				0BC8AF67293D1AC400D24A67 /* PillView.swift in Sources */,
 				0BC04576293B406F008D32F6 /* ContentView.swift in Sources */,
+				0BA664302957180F007EBAFB /* StorysListView.swift in Sources */,
 				0B8B6E1529434804003B4F96 /* CreateView.swift in Sources */,
 				0B5E31ED294B2D6D009B77F1 /* CreateValidator.swift in Sources */,
 				0B5E31F0294B5C13009B77F1 /* HapticsManager.swift in Sources */,

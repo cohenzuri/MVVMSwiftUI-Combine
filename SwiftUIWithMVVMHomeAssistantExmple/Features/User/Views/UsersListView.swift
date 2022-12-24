@@ -28,6 +28,10 @@ struct UsersListView: View {
                 } else {
                     ScrollView {
                         
+                        StorysListView()
+                            .padding(.horizontal, 30)
+                            .environmentObject(vm)
+                        
                         LazyVGrid(columns: columns,
                                   spacing: 16) {
                             
@@ -47,7 +51,7 @@ struct UsersListView: View {
                                 
                             }
                         }
-                        .padding()
+                                  .padding()
                     }
                     
                     .overlay(alignment: .bottom, content: {
