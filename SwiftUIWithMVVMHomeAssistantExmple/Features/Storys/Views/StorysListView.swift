@@ -31,7 +31,7 @@ struct StorysListView: View {
                             .cornerRadius(50)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 50)
-                                    .stroke(.orange, lineWidth: 2)
+                                    .stroke(.orange, lineWidth: 3)
                             )
                             .padding(.top, 10)
     
@@ -41,7 +41,6 @@ struct StorysListView: View {
                         
                     }
                     .background(Color.black)
-        
                 }
             }
         }

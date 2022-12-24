@@ -22,7 +22,7 @@ struct UsersListView: View {
             ZStack {
                 
                 background
-                
+            
                 if vm.isLoading {
                     ProgressView()
                 } else {
@@ -65,15 +65,16 @@ struct UsersListView: View {
             .navigationTitle("People")
             
             .toolbar {
-                
+               
                 ToolbarItem(placement: .primaryAction) {
-                    create
+                    add
                 }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    refresh
+                ToolbarItem(placement: .primaryAction) {
+                    like
                 }
-                
+                ToolbarItem(placement: .primaryAction) {
+                    send
+                }
             }
         }
         
@@ -128,28 +129,49 @@ struct UsersListView: View {
 
 private extension UsersListView {
     
-    var refresh: some View {
+    var send: some View {
         
-        Button{
+        Button {
             Task {
                 await vm.fetchUsers()
             }
             
         } label: {
-            Symbols.refresh
+            Symbols.send
+                .foregroundColor(.white)
+                .font(
+                    .system(.headline, design: .rounded)
+                    .bold()
+                )
         }
         .disabled(vm.isLoading)
     }
     
-    var create: some View {
+    var like: some View {
+        
+        Button {
+            
+        } label: {
+            Symbols.heart
+                .foregroundColor(.white)
+                .font(
+                    .system(.headline, design: .rounded)
+                    .bold()
+                )
+        }
+    }
+    
+    var add: some View {
         
         Button {
             shouldShowCreate.toggle()
         } label: {
-            Symbols.plus
+            Symbols.plusapp
+                .foregroundColor(.white)
                 .font(
                     .system(.headline, design: .rounded)
                     .bold()
+                    
                 )
         }
         .disabled(vm.isLoading)
