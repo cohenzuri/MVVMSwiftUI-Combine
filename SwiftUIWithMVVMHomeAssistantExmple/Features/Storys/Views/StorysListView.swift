@@ -26,13 +26,14 @@ struct StorysListView: View {
                     VStack {
                         
                         AsyncImage(url: URL(string: user.avatar))
-                            .frame(width: 75, height: 75)
+                            .frame(width: 60, height: 60)
                             .foregroundColor(.white)
                             .cornerRadius(50)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 50)
-                                    .stroke(.orange, lineWidth: 3)
+                                    .stroke(LinearGradient(colors: [.red ,.orange, .yellow, .orange], startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 2.3)
                             )
+                            .frame(width: 68, height: 68)
                             .padding(.top, 10)
     
                         

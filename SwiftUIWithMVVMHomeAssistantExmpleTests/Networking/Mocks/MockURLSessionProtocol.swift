@@ -31,8 +31,9 @@ class MockURLSessionProtocol: URLProtocol {
         client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
         
         if let data = data {
-            client?.urlProtocolDidFinishLoading(self)
+            client?.urlProtocol(self, didLoad: data)
         }
+        client?.urlProtocolDidFinishLoading(self)
     }
     
     override func stopLoading() {
