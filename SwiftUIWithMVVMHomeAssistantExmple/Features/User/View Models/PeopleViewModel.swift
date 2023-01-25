@@ -14,14 +14,14 @@ final class PeopleViewModel: ObservableObject {
     @Published private(set) var viewState: ViewState?
     @Published var hasError = false
     
-    private var page = 1
-    private var totalPages: Int?
+    private(set) var page = 1
+    private(set) var totalPages: Int?
     private var networkingManager: NetworkingManagerImpl!
     
     var isLoading: Bool {
         viewState == .loading
     }
-   
+    
     var isFetching: Bool {
         viewState == .fetching
     }
@@ -99,5 +99,5 @@ private extension PeopleViewModel {
         }
     }
 }
-    
+
 
