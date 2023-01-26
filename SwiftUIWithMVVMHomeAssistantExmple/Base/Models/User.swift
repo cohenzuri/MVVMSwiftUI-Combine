@@ -6,7 +6,7 @@
 //
 
 // MARK: - JSON
-struct UserResponse: Codable {
+struct UserResponse: Codable, Equatable {
     let data: User
     let support: Support
 }
