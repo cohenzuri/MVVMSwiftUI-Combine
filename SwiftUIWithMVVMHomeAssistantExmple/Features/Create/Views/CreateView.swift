@@ -11,8 +11,34 @@ struct CreateView: View {
     
     @Environment(\.dismiss) private var dismiss
     @FocusState private var focusedField: Field?
-    @StateObject private var vm = CreateViewModel()
+    @StateObject private var vm: CreateViewModel
+    
     let successfulAction: () -> Void
+    
+    //
+    
+//    init(successfulAction: @escaping () -> Void) {
+//        
+//        self.successfulAction = successfulAction
+//        
+//        #if DEBUG
+//        
+//        if UITestingHelper.isUITesting {
+//            
+//            let mock: NetworkingManagerImpl = UITestingHelper.isCreateNetworkingSuccessful ? NetworkingManagerCreateSuccessMock() : NetworkingManagerCreateFailureMock()
+//            _vm = StateObject(wrappedValue: CreateViewModel(networkingManager: mock))
+//            
+//        } else {
+//            _vm = StateObject(wrappedValue: CreateViewModel())
+//        }
+//        
+//        #else
+//            _vm = StateObject(wrappedValue: CreateViewModel())
+//        #endif
+//    }
+//  
+    
+    //
     
     var body: some View {
         
@@ -67,12 +93,6 @@ extension CreateView {
         case firstName
         case lastName
         case job
-    }
-}
-
-struct CreateView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateView(successfulAction: {} )
     }
 }
 

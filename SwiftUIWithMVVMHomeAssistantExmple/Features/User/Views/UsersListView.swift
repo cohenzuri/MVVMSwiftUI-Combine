@@ -88,7 +88,7 @@ struct UsersListView: View {
         }
         .sheet(isPresented: $shouldShowCreate) {
             
-            CreateView {
+            CreateView(vm: <#CreateViewModel#>) {
                 hapric(.success)
                 withAnimation(.spring().delay(0.25)) {
                     self.shouldShowSuccess.toggle()

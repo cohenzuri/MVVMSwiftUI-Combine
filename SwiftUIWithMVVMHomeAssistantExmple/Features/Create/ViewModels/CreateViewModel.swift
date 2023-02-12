@@ -14,7 +14,13 @@ final class CreateViewModel: ObservableObject {
     @Published private(set) var error: FormError?
     @Published var hasError = false
     
-    private let validator = CreateValidator()
+    private let validator: CreateValidatorImap!
+    private let networkingManager: NetworkingManagerImpl!
+    
+    init(networkingManager: NetworkingManagerImpl = NetworkingManager.shared , validator: CreateValidatorImap = CreateValidator()) {
+        self.networkingManager = networkingManager
+        self.validator = validator
+    }
     
     @MainActor
     func create() async {
@@ -28,7 +34,7 @@ final class CreateViewModel: ObservableObject {
             encoder.keyEncodingStrategy = .convertToSnakeCase
             let data = try encoder.encode(user)
             
-            try await NetworkingManager.shared.request(.create(submissionData: data))
+            try await self.networkingManager.request(session: .shared, .create(submissionData: data))
             
             state = .successful
             

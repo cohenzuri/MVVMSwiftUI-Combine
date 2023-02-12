@@ -7,8 +7,13 @@
 
 import Foundation
 
-struct CreateValidator {
+protocol CreateValidatorImap {
     
+    func validate(_ user: NewUser) throws
+}
+
+struct CreateValidator: CreateValidatorImap {
+  
     func validate(_ user: NewUser) throws {
         
         if user.firstName.isEmpty {
